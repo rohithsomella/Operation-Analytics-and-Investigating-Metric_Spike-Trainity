@@ -15,7 +15,7 @@ o	time_spent: time spent to review the job in seconds
 o	org: organization of the actor
 o	ds: date in the yyyy/mm/dd format. It is stored in the form of text, and we use presto to run. no need for date function
 
-#### Case Study 2 (Investigating metric spike):
+### Case Study 2 (Investigating metric spike):
 •	Table-1: users
 o	This table includes one row per user, with descriptive information about that user’s account.
 •	Table-2: events
@@ -35,7 +35,9 @@ In investigating metric spikes, user engagement, user growth, weekly retention, 
 Result:
 The project successfully addressed the questions and requirements presented in the case studies related to operation analytics and investigating metric spikes. By analysing the provided datasets and executing the appropriate queries, meaningful insights were derived for each aspect. The results provided a deeper understanding of user behaviour, product/service quality, user growth, and the effectiveness of email engagement. The project has helped in making data-driven decisions, identifying areas for improvement, and optimizing various operational aspects within the company.
 Analysis using SQL
-Case Study 1 – Jobs data:
+
+
+##Case Study 1 – Jobs data:
 A.	Number of jobs reviewed: Amount of jobs reviewed over time.
 Your task: Calculate the number of jobs reviewed per hour per day for November 2020?
 
