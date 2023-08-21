@@ -1,5 +1,8 @@
 # Operation-Analytics-and-Investigating-Metric_Spike-Trainity
 
+![OPERATION ANALYSIS IMG](https://github.com/rohithsomella/Operation-Analytics-and-Investigating-Metric_Spike-Trainity/assets/141708838/97b332aa-c766-4c62-94b5-53da3f10143b)
+
+
  
 ## Project Description:
 This project focuses on two aspects of data analysis: operation analytics and investigating metric spikes. In operation analytics, the goal is to analyse the end-to-end operations of a company and derive insights to improve various aspects such as workflows, cross-functional team collaboration, and automation. The project involves working closely with teams like operations, support, and marketing to analyse the collected data and predict the company's growth or decline. On the other hand, investigating metric spikes aims to understand anomalies or fluctuations in specific metrics to identify underlying causes and take appropriate actions. The project involves analysing datasets related to user engagement, user growth, weekly retention, weekly engagement, and email engagement to uncover patterns and insights.
@@ -37,8 +40,9 @@ The project successfully addressed the questions and requirements presented in t
 Analysis using SQL
 
 
-##Case Study 1 – Jobs data:
-A.	Number of jobs reviewed: Amount of jobs reviewed over time.
+## Case Study 1 – Jobs data:
+
+A.	**Number of jobs reviewed:** Amount of jobs reviewed over time.
 Your task: Calculate the number of jobs reviewed per hour per day for November 2020?
 
 
@@ -55,7 +59,7 @@ ORDER BY jobs_per_day;`
 
 
 
-B.	Throughput: It is the no. of events happening per second.
+B.	**Throughput**: It is the no. of events happening per second.
 Your task: Let’s say the above metric is called throughput. Calculate 7 day rolling average of throughput? For throughput, do you prefer daily metric or 7-day rolling and why?
 
 `SELECT
@@ -69,7 +73,7 @@ FROM jobs GROUP BY ds;`
  
 
 
-C.	Percentage share of each language: Share of each language for different contents.
+C.	**Percentage share of each language:** Share of each language for different contents.
 Your task: Calculate the percentage share of each language in the last 30 days?
 
 `SELECT 
@@ -85,7 +89,7 @@ ORDER BY percent;`
 
 
 
-D.	Duplicate rows: Rows that have the same value present in them.
+D.	**Duplicate rows:** Rows that have the same value present in them.
 Your task: Let’s say you see some duplicate rows in the data. How will you display duplicates from the table?
 
 `SELECT ds, job_id, actor_id, event, language, time_spent, org, COUNT(*)
@@ -99,7 +103,7 @@ HAVING COUNT(*) > 1;`
 No Duplicate rows.
 
 ## Case Study 2 (Investigating metric spike):
-A.	User Engagement: To measure the activeness of a user. Measuring if the user finds quality in a product/service.
+A.	**User Engagement:** To measure the activeness of a user. Measuring if the user finds quality in a product/service.
 Your task: Calculate the weekly user engagement?
 
 `SELECT YEAR(occurred_at) AS year,
@@ -112,7 +116,7 @@ GROUP BY YEAR(occurred_at), WEEK(occurred_at), YEAR(occurred_at);`
 
 
 
-B.	User Growth: Amount of users growing over time for a product.
+B.	**User Growth:** Amount of users growing over time for a product.
 Your task: Calculate the user growth for the product.
 
 `SELECT
@@ -131,7 +135,7 @@ ORDER BY month;`
 ![image](https://github.com/rohithsomella/Operation-Analytics-and-Investigating-Metric_Spike-Trainity/assets/141708838/08d63581-eff0-40be-8975-030b4528af3b)
 
 
-C.	Weekly Retention: Users getting retained weekly after signing-up for a product.
+C.	**Weekly Retention:** Users getting retained weekly after signing-up for a product.
 Your task: Calculate the weekly retention of users-sign up cohort?
 
 `SELECT
@@ -166,7 +170,7 @@ ORDER BY
   …
 
 
-D.	Weekly Engagement: To measure the activeness of a user. Measuring if the user finds quality in a product/service weekly.
+D.	**Weekly Engagement:** To measure the activeness of a user. Measuring if the user finds quality in a product/service weekly.
 Your task: Calculate the weekly engagement per device?
 
 `SELECT
@@ -183,7 +187,7 @@ ORDER BY week, device;`
 
 
 
-E.	Email Engagement: Users engaging with the email service.
+E.	**Email Engagement:** Users engaging with the email service.
 Your task: Calculate the email engagement metrics?
 By Week:
 
@@ -199,7 +203,7 @@ ORDER BY week;`
 
  
 
-Total Engagement:
+**Total Engagement:**
 
 `SELECT
   COUNT(DISTINCT CASE WHEN action = 'email_open' THEN user_id END) AS email_open_count,
